@@ -1,4 +1,4 @@
-# Independent Project Week 4 :
+# Independent Project Week 4 : Pizza Parlor
 
 ####  1/31/20
 
@@ -6,12 +6,14 @@
 
 ## Description
 
-A website created with C# and HTML where a user can submit a word and determine its raw Scrabble score.
+A webiste that allows the user to .
 
 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
+| User selects the size of the pizza | User checks the size of the pizza and submits | A pizza the size of the user's selection is returned |
+The user selects the size of the pizza | user checks the size of the pizza and submits | A pizza the size of the user's selection and cost associted with that size is returned |
 | User adds toppings to pizza| User checks the topping they wish to select| A pizza with toppings is returned|
 | User adds toppings to pizza and receives price | User selects topping and submits | A pizza with toppings and a price combining the price of the pizza and the price of the selected toppings is returned.
 
@@ -34,10 +36,10 @@ A website created with C# and HTML where a user can submit a word and determine 
 
 ## Support and contact details
 
-_Email no one with any questions, comments, or concerns._
+_Email Dcluukko@gmail.com with any questions or concerns_
 
 ### License
 
 *{This software is licensed under the MIT license}*
 
-Copyright (c) 2017 **_{Marilyn Carlin, David Wilson}_**
+Copyright (c) 2020 **_Dana Luukko_**

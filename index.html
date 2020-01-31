@@ -14,8 +14,26 @@
     <div class="jumbotron">
       <h1>Dana's Pizza Parlor</h1>
     </div>
-    <form id="select-pizza-size">
+    <form id="select-pizza-size-topping">
       
+      <h2>Select Pizza Size :</h2>
+      <select class ="form-control" id="pizza-size">
+        <option value="1">Small</option>
+        <option value="2">Medium</option>
+        <option value="3">Large</option>
+        <option value="4">Mega</option>
+      </select>
+      
+      <h2>Select Pizza Topping</h2>
+      <input type = "checkbox" name="topping" value="soyCurl"> Soy Curls<br>
+      <input type = "checkbox" name="topping" value="broccoli"> Broccoli<br>
+      <input type = "checkbox" name="topping" value="spinach"> Spinach<br>
+      <input type = "checkbox" name="topping" value="roastedToms"> Roasted Tomatoes<br>
+      <br>
+      <button type="submit" class="btn btn-success">Pizza Time!</button>
+      <span id="pizza-time">
+        <p><b>Your Pizza Order:</b></p>
+      </span>
     </form>
   </div>
 </body>
