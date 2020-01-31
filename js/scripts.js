@@ -37,6 +37,8 @@ function createNewPizza(size, toppings){
 	order.getPizza(size, toppings);
 	order.pizzaOrders[0].calcTotalCost(order.pizzaOrders[0].size);
 
+		$("#show-pizza-size").html(order.pizzaOrders[0].size);
+		$("#total-cost").html(order.pizzaOrders[0].cost);
 }
 $(document).ready(function () {
 	var toppingInput = [];
@@ -50,5 +52,6 @@ $(document).ready(function () {
 		});
 		createNewPizza(sizeInput,toppingInput);
 		displayToppingList(order.pizzaOrders[0].toppings[0]);
+		$(".show-order").show();
 	});
 });
