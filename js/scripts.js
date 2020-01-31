@@ -1,53 +1,47 @@
-//BL : Pizza Logic
-function Pizza() {
-	this.toppings = [],
+//BL : Order Logic
+function Order() {
+	this.pizzaorders = [],
 		this.currentId = 0
 }
 
-Pizza.prototype.addsize = function (size) {
-	size.id = this.assignSizeId();
-	this.size.push(size);
+Order.prototype.getPizza = function (size, toppings) {
+	var newPizza = new Pizza (size, toppings);
+	console.log(newPizza)
+	this.pizzas.push(newPizza);
 }
 
-//BL : Size Logic
-function Size(small, medium, large, mega) {
-	this.small = small,
-	this.medium = medium,
-	this.large = large,
-	this.mega = mega
-
-	this.toppings = [],
-	this.toppingsId = 0
+//BL : Pizza Logic
+function Pizza(size, toppings) {
+	this.size = size,
+		this.toppings = toppings
+	this.cost = cost = []
 }
-//BL : Topping Logic
-function Topping(soyCurls, broccoli, spinach, roastedToms) {
-	this.soyCurls = soyCurls,
-	this.broccoli = broccoli,
-	this.spinach = spinach,
-	this.roastedToms = roastedToms
+//BL : Cost
+Pizza.prototype.calcCost = function (size) {
+	var calcPizzaCost = this.size * (2) + this.toppings[0]
+	this.cost.push(parseInt(calcPizzaCost));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // User Interface Logic
+
+var order = new Order();
+
+function createNewPizza(size, toppings){
+	order.orderPizza(size, toppings);
+	order.pizzas[0].calcCost(order.pizzas[0].size);
+
+}
 $(document).ready(function () {
-	$("form#select-pizza-size-topping").submit(function(event) {
-		event.preventDefault() 
-			$("#pizza-time").show();
-		$("input:checkbox[name=topping]:checked").each(function(){
-			var checkedSize = $(this).val();
-			$("#pizza-time").append(checkedSize + "<br>");
+	var toppingInput = [];
+	$("form#select-pizza-size-topping").submit(function () {
+		event.preventDefault();
+		var selectedSize = parseInt($("#pizza-size").val());
+		console.log(selectedSize);
+		$("input:checkbox[name=topping]:checked").each(function () {
+			var pizzaToppingsChosen = $(this).val();
+			toppingInput.push(pizzaToppingsChosen);
+			console.log(pizzaToppingsChosen);
 		});
+		getPizza(selectedSize,toppingInput);
+		
 	});
 });

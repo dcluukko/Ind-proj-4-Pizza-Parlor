@@ -15,9 +15,10 @@
       <h1>Dana's Pizza Parlor</h1>
     </div>
     <form id="select-pizza-size-topping">
-      
+
       <h2>Select Pizza Size :</h2>
       <select class ="form-control" id="pizza-size">
+        <option value="none"></option>
         <option value="1">Small</option>
         <option value="2">Medium</option>
         <option value="3">Large</option>
@@ -31,8 +32,11 @@
       <input type = "checkbox" name="topping" value="roastedToms"> Roasted Tomatoes<br>
       <br>
       <button type="submit" class="btn btn-success">Pizza Time!</button>
-      <span id="pizza-time">
-        <p><b>Your Pizza Order:</b></p>
+      <span id="pizza-size">
+          <p><b>Size:</b></p>
+        </span>
+      <span id="pizza-topping">
+        <p><b>Toppings:</b></p>
       </span>
     </form>
   </div>
