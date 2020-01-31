@@ -24,6 +24,10 @@ Pizza.prototype.calcTotalCost = function (size) {
 // User Interface Logic
 
 var order = new Order();
+function displayToppingList(pizza){
+	var htmlForToppinfList = "";
+		pizza.forEach(function(topping))
+}
 
 function createNewPizza(size, toppings){
 	order.getPizza(size, toppings);
