@@ -1,13 +1,13 @@
 //BL : Order Logic
 function Order() {
-	this.pizzaorders = [],
+	this.pizzaOrders = [],
 		this.currentId = 0
 }
 
 Order.prototype.getPizza = function (size, toppings) {
 	var newPizza = new Pizza (size, toppings);
 	console.log(newPizza)
-	this.pizzas.push(newPizza);
+	this.pizzaOrders.push(newPizza);
 }
 
 //BL : Pizza Logic
@@ -17,7 +17,7 @@ function Pizza(size, toppings) {
 	this.cost = cost = []
 }
 //BL : Cost
-Pizza.prototype.calcCost = function (size) {
+Pizza.prototype.calcTotalCost = function (size) {
 	var calcPizzaCost = this.size * (2) + this.toppings[0]
 	this.cost.push(parseInt(calcPizzaCost));
 }
@@ -26,8 +26,8 @@ Pizza.prototype.calcCost = function (size) {
 var order = new Order();
 
 function createNewPizza(size, toppings){
-	order.orderPizza(size, toppings);
-	order.pizzas[0].calcCost(order.pizzas[0].size);
+	order.getPizza(size, toppings);
+	order.pizzas[0].calcTotalCost(order.pizzas[0].size);
 
 }
 $(document).ready(function () {
