@@ -12,7 +12,9 @@ A website created with C# and HTML where a user can submit a word and determine 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Homepage** | User accesses localhost:5004 | Homepage with user input form |
+| User adds toppings to pizza| User checks the topping they wish to select| A pizza with toppings is returned|
+| User adds toppings to pizza and receives price | User selects topping and submits | A pizza with toppings and a price combining the price of the pizza and the price of the selected toppings is returned.
+
 
 
 ## Setup/Installation Requirements
