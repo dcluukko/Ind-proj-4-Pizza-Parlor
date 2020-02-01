@@ -7,9 +7,9 @@ body {
     color:white;
     background-image: url(https://public.touch2success.com/static/2eabcb65848d36b5236a45b29a4e784f/img/php88Omci.png);
     background-repeat: no-repeat;
-		background-size: 600px;
+		background-size: 600px; 
+		text-align: center;
 		
-		 
 }
 .container {
     display: block;
@@ -17,12 +17,35 @@ body {
 }
 
 .show-order {
-    display:none;
+		display:none;
+		
+		text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(67, 153, 106, 0.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0, 0, 0, 0.3),
+               0 3px 5px rgba(0, 0, 0, 0.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0, 0, 0, 0.15);
+
 		
 		list-style-position: inside;
 		text-align: center;
 		font-size: x-large;
 		background-color: chartreuse;
+		background-blend-mode: color-dodge;
+		width: 700px;
+		border: 15px solid rgb(46, 45, 102);
+		border-radius: 30px;
+		padding: 50px;
+		margin: 90px;
+}
+ul{
+	padding-left: 0;
 }
 .whole-form {
     border: 20 px red;
@@ -31,6 +54,4 @@ body {
 
 img {
 	margin: 30px;
-	size: 30px;
-	float: left;
 }
