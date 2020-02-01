@@ -16,7 +16,7 @@ function Pizza(size, toppings) {
 		this.toppings.push(toppings);
 	this.cost = cost = []
 }
-//BL : Cost
+//BL : Cost Calculation 
 Pizza.prototype.calcTotalCost = function () {
 	var calcPizzaCost = this.size * (2) + this.toppings[0].length
 	this.cost.push(parseInt(calcPizzaCost));
@@ -25,6 +25,7 @@ Pizza.prototype.calcTotalCost = function () {
 // User Interface Logic
 
 var order = new Order();
+//Loop to Display Toppings List
 function displayToppingList(pizza){
 	var htmlForToppingList = "";
 		pizza.forEach(function(topping) {
@@ -32,7 +33,7 @@ function displayToppingList(pizza){
 		});
 		$("#show-pizza-topping").html(htmlForToppingList);
 }
-
+// Collecting Order Information 
 function createNewPizza(size, toppings){
 	order.getPizza(size, toppings);
 	order.pizzaOrders[0].calcTotalCost(order.pizzaOrders[0].size);
@@ -52,6 +53,8 @@ $(document).ready(function () {
 		});
 		createNewPizza(sizeInput,toppingInput);
 		displayToppingList(order.pizzaOrders[0].toppings[0]);
+		$()
+		$(".whole-form").hide();
 		$(".show-order").show();
 	});
 });

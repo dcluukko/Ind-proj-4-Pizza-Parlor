@@ -1,8 +1,27 @@
-#pizza-time {
-    display:none;
+body {
+	background-color: lightblue;
+}
+
+
+.jumbotron {
+    color:white;
+    background-image: url(https://public.touch2success.com/static/2eabcb65848d36b5236a45b29a4e784f/img/php88Omci.png);
+    background-repeat: no-repeat;
+		background-size: 600px;
+		border: 30px
+		 
+}
+.container {
+    display: block;
+    background-image: url();
 }
 
 .show-order {
     display:none;
+    border: 20 px red;
+
 }
-    
+.whole-form {
+    border: 20 px red;
+    display: block;
+}

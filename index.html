@@ -12,34 +12,50 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Dana's Pizza Parlor</h1>
-    </div>
-    <form id="select-pizza-size-topping">
 
-      <h2>Select Pizza Size :</h2>
-      <select class ="form-control" id="pizza-size">
-        <option value="none"></option>
-        <option value="10'">Small</option>
-        <option value="14'">Medium</option>
-        <option value="18'">Large</option>
-        <option value="24'">Mega</option>
-      </select>
-      
-      <h2>Select Pizza Topping</h2>
-      <input type = "checkbox" name="topping" value="Soy Curls"> Soy Curls<br>
-      <input type = "checkbox" name="topping" value="Broccoli"> Broccoli<br>
-      <input type = "checkbox" name="topping" value="spinach"> Spinach<br>
-      <input type = "checkbox" name="topping" value="Roasted Tomatoes"> Roasted Tomatoes<br>
-      <br>
-      <button type="submit" class="btn btn-success">Pizza Time!</button>
-      <br>
-      <div class="show-order">
-      <p>Size: <span id="show-pizza-size"></span>"</p>
-        <p>Toppings</p>
-        <ul id="show-pizza-topping"></ul>
-        <h2 id="total-cost"></h2>
-      </div>  
+    </div>
+    <div class="whole-form">
+      <form id="select-pizza-size-topping">
+
+        <h2>Select Pizza Size :</h2>
+        <select class="form-control" id="pizza-size">
+          <option value="none"></option>
+          <option value="10'">Small</option>
+          <option value="14'">Medium</option>
+          <option value="18'">Large</option>
+          <option value="24'">Mega</option>
+        </select>
+
+        <h2>Select Pizza Topping</h2>
+        <p>Vegan Toppings</p>
+        <input type="checkbox" name="topping" value="Soy Curls"> Soy Curls<br>
+        <input type="checkbox" name="topping" value="Broccoli"> Broccoli<br>
+        <input type="checkbox" name="topping" value="spinach"> Spinach<br>
+        <input type="checkbox" name="topping" value="Roasted Tomatoes"> Roasted Tomatoes<br>
+        <br>
+        <p>Meat Bro Toppings</p>
+        <input type="checkbox" name="topping" value="Pig Chop"> Pig Chop<br>
+        <input type="checkbox" name="topping" value="Hot Dogs"> Hot Dogs<br>
+        <input type="checkbox" name="topping" value="Beef Bits"> Beef Bits<br>
+        <input type="checkbox" name="topping" value="Bird Strips"> Bird Strips<br>
+        <br>
+        <p>Sauce Spice Level</p>
+        <input type="checkbox" name="topping" value="Same Ol' Same Ol'"> Same Ol' Same Ol'<br>
+        <input type="checkbox" name="topping" value="Lil Kick"> Lil Kick<br>
+        <input type="checkbox" name="topping" value="Feelin Hot Hot Hot"> Feelin Hot Hot Hot<br>
+        <input type="checkbox" name="topping" value="Mouth Inferno"> Mouth Inferno<br>
+        <br>
+        <button type="submit" class="btn btn-success">Pizza Time!</button>
+        <br>
       </form>
+    </div>
+    <!-- Showing Size, List of Toppings, Total Cost -->
+    <div class="show-order">
+      <p>Size: <span id="show-pizza-size"></span>"</p>
+      <p>Toppings</p>
+      <ul id="show-pizza-topping"></ul>
+      <p>Total Cost : $<span id="total-cost"></span></p>
+    </div>
   </div>
 </body>
 
