@@ -8,7 +8,7 @@ body {
     background-image: url(https://public.touch2success.com/static/2eabcb65848d36b5236a45b29a4e784f/img/php88Omci.png);
     background-repeat: no-repeat;
 		background-size: 600px;
-		border: 30px
+		
 		 
 }
 .container {
@@ -18,10 +18,19 @@ body {
 
 .show-order {
     display:none;
-    border: 20 px red;
-
+		
+		list-style-position: inside;
+		text-align: center;
+		font-size: x-large;
+		background-color: chartreuse;
 }
 .whole-form {
     border: 20 px red;
     display: block;
+}
+
+img {
+	margin: 30px;
+	size: 30px;
+	float: left;
 }
