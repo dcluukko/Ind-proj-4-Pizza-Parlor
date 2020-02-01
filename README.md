@@ -21,7 +21,11 @@ The user selects the size of the pizza | user checks the size of the pizza and s
 
 ## Setup/Installation Requirements
 
-1. To Run t
+1. To Run this webpage, open the command prompt and type:
+$ git clone : 
+2. Navigate into the ind-proj-4 directory
+$ cd desktop/ind-proj-4
+3. 
 
 ## Known Bugs
 * No known bugs at this time.
