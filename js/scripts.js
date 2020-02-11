@@ -20,11 +20,10 @@ function Pizza(size, toppings) {
 Pizza.prototype.calcTotalCost = function () {
 	var calcPizzaCost = this.size * (2) + this.toppings[0].length
 	this.cost.push(parseInt(calcPizzaCost));
-	console.log(calcPizzaCost);
+
 }
 // User Interface Logic
 
-var order = new Order();
 //Loop to Display Toppings List
 function displayToppingList(pizza) {
 	var htmlForToppingList = "";
@@ -34,17 +33,20 @@ function displayToppingList(pizza) {
 	$("#show-pizza-topping").html(htmlForToppingList);
 }
 // Collecting Order Information 
-function createNewPizza(size, toppings) {
-	order.getPizza(size, toppings);
-	order.pizzaOrders[0].calcTotalCost(order.pizzaOrders[0].size);
-
-	$("#show-pizza-size").html(order.pizzaOrders[0].size);
-	$("#total-cost").html(order.pizzaOrders[0].cost);
-}
 $(document).ready(function () {
+	var order = new Order();
 	var toppingInput = [];
+
 	$("form#select-pizza-size-topping").submit(function () {
 		event.preventDefault();
+
+		function createNewPizza(sizeInput, toppingInput) {
+			order.getPizza(sizeInput, toppingInput);
+			order.pizzaOrders[0].calcTotalCost(order.pizzaOrders[0].size);
+
+			$("#show-pizza-size").html(order.pizzaOrders[0].size);
+			$("#total-cost").html(order.pizzaOrders[0].cost);
+		}
 		var sizeInput = parseInt($("#pizza-size").val());
 
 		$("input:checkbox[name=topping]:checked").each(function () {
